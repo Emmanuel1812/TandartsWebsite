@@ -1,0 +1,108 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              String           @id @default(uuid())
+  email           String           @unique
+  password        String
+  name            String
+  role            String           @default("PATIENT") // Default role is PATIENT, can be ADMIN or WORKER
+  patient         Patient? 
+  workerSchedules WorkerSchedule[]
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+}
+
+model Patient {
+  id                  String   @id @default(uuid())
+  userId              String   @unique
+  user                User     @relation(fields: [userId], references: [id])
+  achternaam          String
+  tussenvoegsel       String?
+  voornaam            String
+  voorletters         String?
+  geboortedatum       String
+  geslacht            String
+  straatEnHuisnummer  String
+  postcode            String
+  plaats              String
+  telefoonThuis       String?
+  mobieleNummer       String
+  naamVerzekeraar     String?
+  verzekeringsnummer  String?
+  bsnNummer           String?
+  aanvullendVerzekerd Boolean  @default(false)
+  regelmatigTandarts  Boolean  @default(false)
+  laatsteTandarts     String?
+  redenAfspraak       String?
+  onderBehandelingArts Boolean @default(false)
+  naamArts            String?
+  gebruiktMedicijnen  Boolean  @default(false)
+  naamMedicijnen      String?
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  appointments        Appointment[]
+}
+
+model Appointment {
+  id          String   @id @default(uuid())
+  patientId   String?  // Optional for guests
+  patientData Patient? @relation(fields: [patientId], references: [id])
+  serviceId   String?
+  service     Service? @relation(fields: [serviceId], references: [id])
+  patientName String   // Can act as fallback for guests
+  email       String   // Can act as fallback for guests
+  phone       String   // Can act as fallback for guests
+  date        DateTime
+  startTime   String
+  endTime     String
+  notes       String?
+  status      String   @default("CONFIRMED")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Schedule {
+  id        String   @id @default(uuid())
+  date      DateTime
+  startTime String
+  endTime   String
+  isClosed  Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Service {
+  id          String        @id @default(uuid())
+  name        String
+  description String?
+  price       Float
+  duration    Int           // in minuten
+  setupTime   Int           @default(0) // voorbereidingstijd in minuten
+  downTime    Int           @default(0) // opruimtijd in minuten
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  appointments Appointment[]
+}
+
+model WorkerSchedule {
+  id        String   @id @default(uuid())
+  workerId  String
+  worker    User     @relation(fields: [workerId], references: [id], onDelete: Cascade)
+  date      DateTime
+  startTime String
+  endTime   String
+  notes     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
