@@ -22,7 +22,7 @@ export default function BookingPage() {
         fetch('/api/services')
             .then(res => res.json())
             .then(data => {
-                setServices(data || []);
+                setServices(Array.isArray(data) ? data : []);
                 setIsLoadingServices(false);
             })
             .catch(() => {
@@ -79,7 +79,7 @@ export default function BookingPage() {
                 <Link href="/" style={{ color: 'var(--primary)', fontWeight: 600, fontSize: '1.25rem' }}>&larr; Terug naar home</Link>
             </nav>
 
-            <div className="glass-panel animate-fade-in" style={{ maxWidth: '900px', width: '100%', padding: '4rem 3rem', margin: '0 auto' }}>
+            <div className="glass-panel animate-fade-in" style={{ maxWidth: '900px', width: '100%', padding: '4rem 3rem', margin: '0 auto' }} id="booking-panel">
                 <h1 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '1rem' }}>Maak een Afspraak</h1>
                 <p style={{ textAlign: 'center', color: 'var(--text-muted)', marginBottom: '3rem', fontSize: '1.125rem' }}>
                     Selecteer een gewenste datum en tijd voor uw behandeling.
@@ -96,7 +96,7 @@ export default function BookingPage() {
                         </div>
                     </div>
                 ) : (
-                    <div className="grid-2" style={{ gap: '4rem', gridTemplateColumns: selectedSlot ? '1fr 1fr' : '1fr' }}>
+                    <div className="grid-2 booking-grid" style={{ gap: '4rem', gridTemplateColumns: selectedSlot ? '1fr 1fr' : '1fr' }}>
                         {/* Left Column: Date and Time */}
                         <div style={{ maxWidth: selectedSlot ? '100%' : '500px', margin: selectedSlot ? '0' : '0 auto', width: '100%' }}>
 

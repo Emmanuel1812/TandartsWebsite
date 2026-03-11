@@ -236,7 +236,7 @@ export default function SignUpPage() {
                         </StaggerItem>
 
                         <StaggerItem>
-                            <div style={{ display: 'flex', gap: '1rem' }}>
+                            <div className="inschrijven-actions" style={{ display: 'flex', gap: '1rem' }}>
                                 <button type="submit" disabled={loading} className="btn btn-primary" style={{ flex: 1, padding: '1rem', fontSize: '1.125rem', opacity: loading ? 0.7 : 1 }}>
                                     {loading ? 'Bezig met inschrijven...' : 'Inschrijven Afronden'}
                                 </button>
