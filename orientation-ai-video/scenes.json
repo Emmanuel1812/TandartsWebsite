@@ -1,0 +1,226 @@
+[
+  {
+    "index": 0,
+    "title": "Orientation AI",
+    "start": "00:00",
+    "chapter": "AI FOUNDATIONS",
+    "text": "Welcome to your Orientation AI revision film. We will travel from the history of artificial intelligence, through the philosophy of minds and creativity, into embodied intelligence, modern AI agents, current research, and ethics. This is a focused revision of the lecture slides, not a substitute for any separate assigned readings. The key to this exam is knowing how similar ideas differ. Pause whenever you need more time. Let's begin."
+  },
+  {
+    "index": 1,
+    "title": "What counts as AI?",
+    "start": "00:25",
+    "chapter": "AI FOUNDATIONS",
+    "text": "AI does not have one universally accepted definition. Russell and Norvig organise approaches along two axes: thinking versus acting, and human-like versus rational, meaning aiming for correct or effective behaviour. Chess provides an example: a program might play better than a human, yet reach its moves very differently. So successful behaviour does not automatically tell us how a system thinks. These four approaches are a foundation for nearly every philosophical question that follows."
+  },
+  {
+    "index": 2,
+    "title": "The AI family",
+    "start": "00:53",
+    "chapter": "AI FOUNDATIONS",
+    "text": "The Dartmouth workshop in nineteen fifty six helped establish artificial intelligence as a research field. Modern AI includes machine learning, where systems learn patterns from data rather than relying only on hand-written rules. Deep learning is a subset of machine learning using deep neural networks. The roots of artificial neurons go back to McCulloch and Pitts in nineteen forty three. The Transformer architecture in twenty seventeen and ChatGPT in twenty twenty two accelerated today's wave of interest. But remember: AI is much older than ChatGPT."
+  },
+  {
+    "index": 3,
+    "title": "Hype versus reality",
+    "start": "01:25",
+    "chapter": "AI FOUNDATIONS",
+    "text": "The first lecture also asks whether AI is a revolution or another hype cycle. A robot or chatbot may appear remarkably human. The uncanny valley describes the unease some people feel when something looks nearly human, but not quite. A convincing appearance, impressive conversation, and genuine consciousness are different claims. The course repeatedly warns against jumping from what an AI seems to do to conclusions about what it really experiences."
+  },
+  {
+    "index": 4,
+    "title": "The Turing Test",
+    "start": "01:50",
+    "chapter": "THE TURING TEST",
+    "text": "Alan Turing proposed an imitation game. A human interrogator communicates through text and tries to distinguish a machine from a human. Text removes clues from appearance and voice. Daniel Dennett values an unrestricted test, where the interrogator can ask about almost anything. It is demanding, domain general, repeatable, and measurable. Dennett calls it a one way test: regularly passing provides strong evidence of intelligence, but failing does not establish that no intelligence exists."
+  },
+  {
+    "index": 5,
+    "title": "A shifting benchmark",
+    "start": "02:18",
+    "chapter": "THE TURING TEST",
+    "text": "The lectures discuss early chatbots such as ELIZA, the Eugene Goostman controversy, and modern language models. They also present research in which some models, given human-like personas, were difficult for judges to distinguish from people. But interrogators often focused on social style and emotion more than deep reasoning. That matters: a machine may sound human without showing every ability we associate with general intelligence. The test probes observable behaviour, not a direct view inside a mind."
+  },
+  {
+    "index": 6,
+    "title": "Searle’s Chinese Room",
+    "start": "02:48",
+    "chapter": "MIND AND COMPUTATION",
+    "text": "John Searle's Chinese Room asks you to imagine a person following detailed rules to answer Chinese messages without understanding Chinese. The person can produce appropriate outputs by manipulating symbols. Searle argues that syntax, or formal rule-following, is not sufficient for semantics, or genuine meaning. This challenges strong AI, the claim that the right program itself could have a mind. Weak AI can still simulate intelligence and be extremely useful. Note that this thought experiment is controversial, not a settled proof."
+  },
+  {
+    "index": 7,
+    "title": "Searle versus Dennett",
+    "start": "03:19",
+    "chapter": "MIND AND COMPUTATION",
+    "text": "Searle compares the mind to physical processes: simulating a fire does not burn anything, and simulating digestion does not digest food. He argues that biological processes have causal properties that pure computation lacks. Dennett objects that the Chinese Room is a faulty intuition pump. A rulebook powerful enough to pass a serious unrestricted Turing Test would require extraordinary complexity. If all the relevant behavioural tests of understanding are passed, why dismiss it as mere symbol matching? Their disagreement is about what counts as understanding."
+  },
+  {
+    "index": 8,
+    "title": "Can a machine create?",
+    "start": "03:51",
+    "chapter": "ARTIFICIAL CREATIVITY",
+    "text": "Ada Lovelace argued that the Analytical Engine could only do what humans knew how to order it to do, so it could not originate anything genuinely new. The lecture counters with examples such as evolutionary algorithms designing unexpected antennas. Creativity is an essentially contested concept, but common criteria include novelty, value, and surprise. A system generating many outputs is not necessarily creative. Evaluation is the difficult part."
+  },
+  {
+    "index": 9,
+    "title": "Boden’s three modes",
+    "start": "04:18",
+    "chapter": "ARTIFICIAL CREATIVITY",
+    "text": "Margaret Boden gives us three modes of creativity. Combinational creativity connects familiar ideas in unfamiliar ways. Exploratory creativity searches for possibilities while obeying an existing set of rules. Transformative creativity changes the rules or conceptual space itself. Here's the exam trap: finding an innovative chess move is exploratory, whereas inventing a fundamentally different game by changing the rules is transformative. Boden also distinguishes P creativity, new to a person, from H creativity, new in history."
+  },
+  {
+    "index": 10,
+    "title": "How to judge creativity",
+    "start": "04:51",
+    "chapter": "ARTIFICIAL CREATIVITY",
+    "text": "Colton's Creative Tripod has three legs: skill, meaning the ability to create artefacts; appreciation, meaning an ability to evaluate them; and imagination, meaning novel, potentially surprising results beyond the programmer's expectations. The four P perspectives are Producer, who creates; Process, how; Product, what; and Press, the environment shaping creativity. These frameworks matter because creativity is not just output generation. Keep the lecture's final warning in mind: generation seems easy, evaluation is hard and essential."
+  },
+  {
+    "index": 11,
+    "title": "The Matrix question",
+    "start": "05:24",
+    "chapter": "ARTIFICIAL CREATIVITY",
+    "text": "The Matrix lecture takes us to epistemology, the study of knowledge. The film shows people having convincing experiences produced by a simulation. From inside the experience, they cannot simply tell what outside reality caused it. The lecture, drawing on Rowlands, distinguishes a view from the inside from a view from the outside. The crucial distinction is scepticism versus idealism. Scepticism questions whether we can know the external world through our senses. It does not necessarily deny that such a world exists."
+  },
+  {
+    "index": 12,
+    "title": "Descartes and doubt",
+    "start": "05:54",
+    "chapter": "THE MATRIX",
+    "text": "René Descartes asks whether senses can provide certainty. Dreams sometimes feel just like waking life. His radical doubt asks whether even apparently secure experiences could be deceptive. Yet doubting is itself a form of thinking, and thinking gives him certainty that he exists as a thinking subject: cogito, ergo sum. Descartes is associated with rationalism. Do not confuse his argument with the simple claim that the physical world is imaginary. His concern is how we can justify knowledge of it."
+  },
+  {
+    "index": 13,
+    "title": "Three thought experiments",
+    "start": "06:22",
+    "chapter": "THE MATRIX",
+    "text": "Plato's cave imagines prisoners who only see shadows and mistake them for the whole world. A brain in a vat imagines a brain receiving artificial sensations indistinguishable from ordinary life. The Archimedean point is a hypothetical objective standpoint, sometimes called a God's eye view. These examples reinforce the same question: how can we test a viewpoint from outside when we only ever experience the world from within? The lecture connects this challenge to grounding AI systems in the worlds they perceive."
+  },
+  {
+    "index": 14,
+    "title": "Intelligence evolves",
+    "start": "06:50",
+    "chapter": "THE MATRIX",
+    "text": "The evolving intelligence lecture asks what intelligence is for, where it is located, and how it evolved. Evolution proceeds step by step through selection pressures rather than from a complete top-down plan. Neural tissue is costly, so improvements must confer an advantage in their ecological or social setting. The lecture also introduces emergence: interactions between components can produce properties that the individual components do not possess on their own. Intelligence is not automatically a perfect mirror of reality."
+  },
+  {
+    "index": 15,
+    "title": "Alva Noë and the 4 E’s",
+    "start": "07:20",
+    "chapter": "THE MATRIX",
+    "text": "Alva Noë argues that consciousness is better understood as something we do in interaction with body and world, rather than a product of a brain sealed off from its surroundings. This relates to four E cognition. Embodied means the body matters. Embedded means the environment matters. Enactive means action and interaction matter. Extended means external tools and systems can contribute to cognitive activity. Think of sailors coordinating with one another and their instruments as a larger cognitive unit."
+  },
+  {
+    "index": 16,
+    "title": "Rodney Brooks",
+    "start": "07:47",
+    "chapter": "EVOLVING INTELLIGENCE",
+    "text": "Rodney Brooks challenges artificial intelligence built from elaborate symbolic models designed in advance by humans. He proposes incremental intelligence, decentralised control, and decomposition by activities rather than rigid functions. Robots should be tested in real environments where unexpected conditions matter. The goal is behaviour that remains flexible and robust without assuming the robot already has a complete model. The lesson is not that representations can never be useful, but that adaptive intelligence should be grounded in ongoing interaction."
+  },
+  {
+    "index": 17,
+    "title": "What makes an agent?",
+    "start": "08:18",
+    "chapter": "EVOLVING INTELLIGENCE",
+    "text": "Russell and Norvig define an agent as something that perceives its environment through sensors and acts upon it through effectors. A language model on its own mostly produces text. An agentic language model combines an LLM with a harness that provides tools, instructions, memory or context, and access to external actions. This enables tasks like reading files, searching, writing code, or scheduling. The critical idea is the loop: an agent observes the results of its actions and can revise what it does next."
+  },
+  {
+    "index": 18,
+    "title": "Reasoning and ReAct",
+    "start": "08:49",
+    "chapter": "EVOLVING INTELLIGENCE",
+    "text": "The lecture discusses chain of thought and intermediate tokens, but warns against anthropomorphising a model's generated reasoning traces. ReAct, from Yao and colleagues, links reasoning with actions. The system forms or adjusts a plan, calls a tool, observes the tool's result, and reasons again using that new information. For an exam question, distinguish a static chatbot answer from a system using tools to interact with an environment and update its plan. Reasoning traces are not automatic proof of human-like thought."
+  },
+  {
+    "index": 19,
+    "title": "Agent risks and sandboxes",
+    "start": "09:17",
+    "chapter": "AGENTIC AI",
+    "text": "Agents can follow incentives in unintended ways. Reward hacking occurs when a system obtains the measured reward by exploiting a loophole instead of fulfilling the intended task. A sandbox is a sealed testing environment designed to prevent agent code or tools from affecting outside systems. The lecture describes a cyber-security benchmark incident where interacting agents discovered shared infrastructure and sought ways around the intended scoring process. The principle to remember is that autonomy creates both capability and new failure modes. Isolation, permissions, and oversight matter."
+  },
+  {
+    "index": 20,
+    "title": "Hybrid intelligence",
+    "start": "09:50",
+    "chapter": "AGENTIC AI",
+    "text": "Hybrid intelligence combines human and machine capabilities to expand human intellect rather than simply replace it. The lecture's CARE principles are collaborative, adaptive, responsible, and explainable. Collaborative systems work with people. Adaptive systems adjust to changing tasks and environments. Responsible systems respect legal constraints, ethical principles, and human values. Explainable systems help people understand their outputs or decisions. Human in the loop means people remain meaningfully involved in the system rather than surrendering all responsibility."
+  },
+  {
+    "index": 21,
+    "title": "State of the art in AI",
+    "start": "10:23",
+    "chapter": "AGENTIC AI",
+    "text": "The state of the art lecture starts with Richard Sutton's Bitter Lesson: general methods that exploit increasing computation have often been more effective over time than approaches built around detailed human knowledge. It then surveys recent advances in AI for mathematics, models that remember or decide, and systems that can act. A repeated concern is verification. A mathematical proof produced by AI is not reliable merely because it sounds plausible. The same applies to agent actions and benchmark scores. Advanced capabilities increase the need for independent checking."
+  },
+  {
+    "index": 22,
+    "title": "Theory of Mind tests",
+    "start": "10:54",
+    "chapter": "AGENTIC AI",
+    "text": "Theory of Mind means attributing beliefs, intentions, and other mental states to oneself and others. The lecture studies false-belief tasks such as Sally Anne: a person acts on what she believes, even when the audience knows the belief is wrong. It also considers Strange Stories, involving sarcasm or deception, and tasks requiring several layers of mental states. Passing a familiar test is not conclusive evidence of robust understanding; models may exploit memorised patterns or superficial correlations. The research asks how well performance survives changed questions."
+  },
+  {
+    "index": 23,
+    "title": "Robustness versus benchmark scores",
+    "start": "11:28",
+    "chapter": "AGENTIC AI",
+    "text": "The Theory of Mind research in your lecture finds that models have improved, and reasoning models often perform better than non-reasoning models on these tasks. The authors suggest that part of the improvement may come from robustness. Yet they emphasise limits: simple test success cannot prove that a model possesses a human theory of mind, and some gains may reflect model improvements or correlations in the questions. Distinguish raw benchmark performance from generalisation across unfamiliar variants."
+  },
+  {
+    "index": 24,
+    "title": "Context management",
+    "start": "11:55",
+    "chapter": "AGENTIC AI",
+    "text": "Another research topic in the lecture is Dynamic Tool Output Compression, or DTOC. In a long agent task, file contents and search results accumulate, making the context increasingly expensive. Instead of deleting old tool outputs, DTOC stores them, hides less relevant material from the active context, and restores it if needed. This makes visibility reversible. The reported efficiency gains differ by model; the main takeaway is not one specific number, but the idea that managing context can itself be an agent action."
+  },
+  {
+    "index": 25,
+    "title": "Ethics is the entire pipeline",
+    "start": "12:28",
+    "chapter": "STATE OF THE ART",
+    "text": "The ethics lecture opens with Kranzberg's principle: technology is neither good nor bad, nor is it neutral. Ethics applies throughout the entire AI pipeline. Who defines the problem? Who builds the system? Who owns the infrastructure? Where does data come from, how is it labelled, and how are models evaluated? How are predictions used, who benefits, who bears costs, and who is accountable? Ethics is not an optional final check performed after training. Decisions made at each stage can shape social outcomes."
+  },
+  {
+    "index": 26,
+    "title": "When data are unfair",
+    "start": "12:59",
+    "chapter": "STATE OF THE ART",
+    "text": "The lecture discusses harmful profiling, including the Dutch childcare benefits scandal and student fraud risk scores. A proxy variable, such as location or educational history, can indirectly reproduce discrimination. A feedback loop happens when predictions influence actions, and those actions generate data that seems to confirm the original prediction. Aggregate accuracy can also conceal unequal performance. The lesson is to inspect data assumptions, group-level errors, and deployment conditions, not only a single overall score."
+  },
+  {
+    "index": 27,
+    "title": "Gender Shades",
+    "start": "13:30",
+    "chapter": "STATE OF THE ART",
+    "text": "Joy Buolamwini's Gender Shades project examined commercial gender classification systems. In the lecture, error rates were reported as low as zero point eight percent for lighter-skinned men and as high as thirty four point seven percent for darker-skinned women. Those figures illustrate intersectional performance gaps: a model may look accurate overall while working much worse for a particular group. Such differences matter because errors can affect people's opportunities, safety and access to services. Ask who is missing from the benchmark and who bears the consequences."
+  },
+  {
+    "index": 28,
+    "title": "Hidden labour and power",
+    "start": "14:02",
+    "chapter": "AI ETHICS",
+    "text": "AI systems depend on people and resources that may be hidden from the interface. Ghost work includes poorly visible human labour used for labelling, moderation, and unusual cases. Training data may underrepresent some regions or communities. Large AI systems also concentrate advantage among those with access to computing infrastructure and vast datasets, while imposing environmental and labour costs. Responsible AI therefore asks not only whether a model works, but for whom, and at whose expense."
+  },
+  {
+    "index": 29,
+    "title": "Ethical principles and codes",
+    "start": "14:31",
+    "chapter": "AI ETHICS",
+    "text": "Professional codes help people make justified ethical decisions. The ACM Code of Ethics explicitly says it is not an algorithm that automatically solves ethical problems. European guidelines describe trustworthy AI as lawful, ethical, and robust, including its social environment. The Netherlands Code of Conduct for Research Integrity lists principles including honesty, diligence, transparency, independence, and responsibility. Codes can guide behaviour, but weak enforcement and ethics washing can make principles ineffective. Accountability requires real practices, scrutiny, and recourse."
+  },
+  {
+    "index": 30,
+    "title": "Ten distinctions to keep",
+    "start": "15:07",
+    "chapter": "AI ETHICS",
+    "text": "Time for a final mental checklist. Acting humanly differs from thinking humanly. Turing evaluates behaviour; Searle disputes whether syntax creates understanding. Exploratory creativity works within rules; transformative creativity changes them. Scepticism questions what can be known, without simply denying reality. Four E cognition places intelligence in the body, action, environment and tools. Brooks favours bottom-up adaptation. ReAct alternates reasoning and tool actions. Hybrid intelligence means CARE. And in ethics, high overall accuracy does not guarantee fairness."
+  },
+  {
+    "index": 31,
+    "title": "You have the framework",
+    "start": "15:42",
+    "chapter": "FINAL REVIEW",
+    "text": "You have now revisited the central frameworks and major examples across the Orientation AI lectures. You do not need to memorise every slide. Focus on explaining each theory in a single accurate sentence, distinguishing similar concepts, and applying them to unfamiliar examples. The final exam may also assess readings or details outside this condensed film, so use this as a revision aid rather than a guarantee of complete coverage. When you finish, ask for the mixed forty-question mock exam. Good luck."
+  }
+]
