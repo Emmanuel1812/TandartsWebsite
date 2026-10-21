@@ -28,7 +28,8 @@ jobs:
 
       - name: Install free voice and video dependencies
         run: |
-          python -m pip install --disable-pip-version-check --no-input 'edge-tts>=7,<9' 'mutagen>=1.47,<2' 'Pillow>=10,<13'
+          python -m pip install --disable-pip-version-check --no-input 'edge-tts>=7,<9' 'mutagen>=1.47,<2' 'Pillow>=10,<13' 'imageio-ffmpeg>=0.5,<1'
+          sudo ln -sf "$(python -c 'from imageio_ffmpeg import get_ffmpeg_exe; print(get_ffmpeg_exe())')" /usr/local/bin/ffmpeg
           ffmpeg -version | head -n 1
 
       - name: Render MP4 with Andrew's natural voice
@@ -37,8 +38,13 @@ jobs:
       - name: Verify video and audio tracks
         run: |
           test -s orientation-ai-video/Orientation_AI_Natural_Voice.mp4
-          ffprobe -v error -show_entries format=duration -of default=nw=1 orientation-ai-video/Orientation_AI_Natural_Voice.mp4
-          ffprobe -v error -show_entries stream=codec_type -of csv=p=0 orientation-ai-video/Orientation_AI_Natural_Voice.mp4
+          python - <<'PY'
+          import subprocess
+          name='orientation-ai-video/Orientation_AI_Natural_Voice.mp4'
+          p=subprocess.run(['ffmpeg','-hide_banner','-i',name],capture_output=True,text=True)
+          assert 'Video:' in p.stderr and 'Audio:' in p.stderr, p.stderr[-1500:]
+          print('Verified audio + video tracks')
+          PY
 
       - name: Save downloadable video and captions
         uses: actions/upload-artifact@v4
