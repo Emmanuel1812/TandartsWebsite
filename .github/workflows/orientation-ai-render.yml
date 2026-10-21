@@ -1,0 +1,51 @@
+name: Orientation AI free natural-voice video
+
+on:
+  push:
+    branches:
+      - orientation-ai-voice
+    paths:
+      - 'orientation-ai-video/**'
+      - '.github/workflows/orientation-ai-render.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    if: github.repository == 'Emmanuel1812/TandartsWebsite'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out isolated project branch
+        uses: actions/checkout@v4
+
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install free voice and video dependencies
+        run: |
+          python -m pip install --disable-pip-version-check --no-input 'edge-tts>=7,<9' 'mutagen>=1.47,<2' 'Pillow>=10,<13'
+          ffmpeg -version | head -n 1
+
+      - name: Render MP4 with Andrew's natural voice
+        run: python orientation-ai-video/render.py --voice en-US-AndrewNeural
+
+      - name: Verify video and audio tracks
+        run: |
+          test -s orientation-ai-video/Orientation_AI_Natural_Voice.mp4
+          ffprobe -v error -show_entries format=duration -of default=nw=1 orientation-ai-video/Orientation_AI_Natural_Voice.mp4
+          ffprobe -v error -show_entries stream=codec_type -of csv=p=0 orientation-ai-video/Orientation_AI_Natural_Voice.mp4
+
+      - name: Save downloadable video and captions
+        uses: actions/upload-artifact@v4
+        with:
+          name: Orientation-AI-Andrew-MP4
+          path: |
+            orientation-ai-video/Orientation_AI_Natural_Voice.mp4
+            orientation-ai-video/Orientation_AI_Natural_Voice_Subtitles.srt
+          retention-days: 7
+          if-no-files-found: error
